@@ -2,12 +2,15 @@
     <string name="app_name">Playing with Data Binding</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
-    <array name="menuOptions">
-        <item name="staticView">Static View</item>
-    </array>
     <string name="title_activity_static_view">Static View</string>
     <string name="staticview_description">
         A very simple example that uses Android Data Binding library to display a object.
     </string>
+    <string name="clock_label">Current time</string>
+    <string name="title_activity_clock_view">Clock View</string>
+
+    <array name="menuOptions">
+        <item name="staticView">Static View</item>
+        <item name="clockView">Clock View</item>
+    </array>
 </resources>

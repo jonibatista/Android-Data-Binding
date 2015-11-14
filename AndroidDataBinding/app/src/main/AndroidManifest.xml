@@ -20,6 +20,10 @@
             android:name=".StaticView"
             android:label="@string/title_activity_static_view" >
         </activity>
+        <activity
+            android:name=".ClockView"
+            android:label="@string/title_activity_clock_view" >
+        </activity>
     </application>
 
 </manifest>

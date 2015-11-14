@@ -27,8 +27,10 @@ public class MainActivity extends Activity {
             System.out.println(position);
             switch (position){
                 case 0:
-                    Intent intent = new Intent(getApplicationContext(), StaticView.class);
-                    startActivity(intent);
+                    startActivity( new Intent(getApplicationContext(), StaticView.class) );
+                    break;
+                case 1:
+                    startActivity( new Intent(getApplicationContext(), ClockView.class) );
                     break;
             }
         }
