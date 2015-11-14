@@ -1,43 +1,36 @@
 package com.jonibatista.playing.androiddatabinding;
 
 import android.app.Activity;
-import android.databinding.DataBindingUtil;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import com.jonibatista.playing.androiddatabinding.databinding.MainActivityBinding;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 public class MainActivity extends Activity {
+
+    private ListView menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MainActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
-        User user = new User("Foo", "Bar");
-        binding.setUser(user);
+        setContentView(R.layout.main_activity);
+
+        menu = (ListView) findViewById(R.id.lvMenu);
+        menu.setOnItemClickListener(itemClickListener);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            System.out.println(position);
+            switch (position){
+                case 0:
+                    Intent intent = new Intent(getApplicationContext(), StaticView.class);
+                    startActivity(intent);
+                    break;
+            }
         }
-
-        return super.onOptionsItemSelected(item);
-    }
+    };
 }

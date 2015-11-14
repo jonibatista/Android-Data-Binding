@@ -1,39 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <data>
-
-        <variable
-            name="user"
-            type="com.jonibatista.playing.androiddatabinding.User" />
-    </data>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:text="@{user.firstName}"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:text="@{user.lastName}"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </LinearLayout>
+    <ListView
+        android:id="@+id/lvMenu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="20dp"
+        android:entries="@array/menuOptions">
+    </ListView>
 </layout>
