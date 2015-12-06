@@ -16,6 +16,11 @@ public class Clock extends BaseObservable {
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
     private String time;
 
+    /**
+     * Constructs a new clock with a initial time.
+     *
+     * @param calendar the calendar with the initial time.
+     */
     public Clock(Calendar calendar){
         this.time = dateFormat.format(calendar.getTime());
     }

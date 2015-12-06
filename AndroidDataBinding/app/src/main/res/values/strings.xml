@@ -4,7 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_static_view">Static View</string>
     <string name="staticview_description">
-        A basic example that uses Android Data Binding library to display a object.
+        A basic example that uses Android Data Binding library to display a POJO.
     </string>
     <string name="clock_label">Time</string>
     <string name="title_activity_clock_view">Clock View</string>
