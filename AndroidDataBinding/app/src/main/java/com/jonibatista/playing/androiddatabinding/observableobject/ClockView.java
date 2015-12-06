@@ -1,4 +1,4 @@
-package com.jonibatista.playing.androiddatabinding.observableobjects;
+package com.jonibatista.playing.androiddatabinding.observableobject;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;

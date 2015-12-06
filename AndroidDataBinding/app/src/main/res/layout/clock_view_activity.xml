@@ -5,7 +5,7 @@
 
         <variable
             name="clock"
-            type="com.jonibatista.playing.androiddatabinding.observableobjects.Clock" />
+            type="com.jonibatista.playing.androiddatabinding.observableobject.Clock" />
     </data>
 
 

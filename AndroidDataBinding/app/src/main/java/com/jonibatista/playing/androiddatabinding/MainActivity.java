@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.jonibatista.playing.androiddatabinding.databinding.StaticView;
-import com.jonibatista.playing.androiddatabinding.observableobjects.ClockView;
+import com.jonibatista.playing.androiddatabinding.observableobject.ClockView;
 
 public class MainActivity extends Activity {
 

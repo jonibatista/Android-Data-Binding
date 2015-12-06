@@ -21,7 +21,7 @@
             android:label="@string/title_activity_static_view" >
         </activity>
         <activity
-            android:name=".observableobjects.ClockView"
+            android:name=".observableobject.ClockView"
             android:label="@string/title_activity_clock_view" >
         </activity>
     </application>
