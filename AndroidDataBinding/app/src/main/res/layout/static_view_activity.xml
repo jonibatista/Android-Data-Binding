@@ -5,7 +5,7 @@
 
         <variable
             name="user"
-            type="com.jonibatista.playing.androiddatabinding.User" />
+            type="com.jonibatista.playing.androiddatabinding.databinding.User" />
     </data>
 
     <LinearLayout

@@ -1,9 +1,10 @@
-package com.jonibatista.playing.androiddatabinding;
+package com.jonibatista.playing.androiddatabinding.databinding;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 
+import com.jonibatista.playing.androiddatabinding.R;
 import com.jonibatista.playing.androiddatabinding.databinding.StaticViewActivityBinding;
 
 /**

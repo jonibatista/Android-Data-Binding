@@ -1,4 +1,4 @@
-package com.jonibatista.playing.androiddatabinding;
+package com.jonibatista.playing.androiddatabinding.databinding;
 
 /**
  * A immutable POJO that contains the user's first and last name.

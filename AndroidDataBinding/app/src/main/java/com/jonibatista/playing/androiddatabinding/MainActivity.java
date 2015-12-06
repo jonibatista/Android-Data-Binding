@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.jonibatista.playing.androiddatabinding.databinding.StaticView;
+import com.jonibatista.playing.androiddatabinding.observableobjects.ClockView;
+
 public class MainActivity extends Activity {
 
     private ListView menu;

@@ -1,10 +1,11 @@
-package com.jonibatista.playing.androiddatabinding;
+package com.jonibatista.playing.androiddatabinding.observableobjects;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jonibatista.playing.androiddatabinding.R;
 import com.jonibatista.playing.androiddatabinding.databinding.ClockViewActivityBinding;
 
 import java.util.Calendar;
