@@ -1,26 +1,51 @@
 package com.jonibatista.playing.androiddatabinding;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Timer;
 
 /**
- * Created by jbatista on 14/11/15.
+ * The observable data object.
+ *
+ * A object that contains a time in a string format where the time can be modified.
  */
-public class Clock {
+public class Clock extends BaseObservable {
 
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
     private String time;
 
     public Clock(Calendar calendar){
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        this.time = sdf.format(calendar.getTime());
+        this.time = dateFormat.format(calendar.getTime());
     }
 
+    /**
+     * Gets the time from the clock.
+     *
+     * @return the last set up time value.
+     */
+    @Bindable
     public String getTime() {
         return time;
     }
 
+    /**
+     * Sets a time.
+     *
+     * @param time value in string format.
+     */
     public void setTime(String time) {
         this.time = time;
+
+        // notifies listeners that time has change so they can get the new value.
+        notifyPropertyChanged(com.jonibatista.playing.androiddatabinding.BR.time);
+    }
+
+    /**
+     * Updates the time to now.
+     */
+    public void updateTime(){
+        setTime(dateFormat.format(Calendar.getInstance().getTime()));
     }
 }

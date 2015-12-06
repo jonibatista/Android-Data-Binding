@@ -3,10 +3,7 @@ package com.jonibatista.playing.androiddatabinding;
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import com.jonibatista.playing.androiddatabinding.databinding.MainActivityBinding;
 import com.jonibatista.playing.androiddatabinding.databinding.StaticViewActivityBinding;
 
 public class StaticView extends Activity {
