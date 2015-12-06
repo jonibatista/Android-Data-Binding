@@ -3,7 +3,6 @@ package com.jonibatista.playing.androiddatabinding.observablefield;
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.view.View;
 
 import com.jonibatista.playing.androiddatabinding.R;
 import com.jonibatista.playing.androiddatabinding.databinding.ClockFieldViewActivityBinding;
@@ -21,25 +20,13 @@ import java.util.Calendar;
  */
 public class ClockFieldView extends Activity{
 
-    // The data object bound to the UI
-    private final ClockField clock = new ClockField(Calendar.getInstance());
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // creating and binding it
         ClockFieldViewActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.clock_field_view_activity);
-        clock.updateTime(); // updates the time to be sync when it's displayed
-        binding.setClock(clock);
-    }
-
-    /**
-     * Updates the clock time which notifies its listeners - UI in this example.
-     * @param view
-     */
-    public void onClickUpdateClock(View view) {
-        clock.updateTime();
+        binding.setClock(new ClockField(Calendar.getInstance()));
     }
 
 }

@@ -1,6 +1,7 @@
 package com.jonibatista.playing.androiddatabinding.observablefield;
 
 import android.databinding.ObservableField;
+import android.view.View;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,5 +34,15 @@ public class ClockField {
      */
     public void updateTime(){
         time.set(dateFormat.format(Calendar.getInstance().getTime()));
+    }
+
+
+
+    /**
+     * Updates the clock time which notifies its listeners - UI in this example.
+     * @param view
+     */
+    public void onClickUpdateClock(View view) {
+        updateTime();
     }
 }
