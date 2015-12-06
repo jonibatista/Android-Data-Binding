@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.jonibatista.playing.androiddatabinding.databinding.StaticView;
+import com.jonibatista.playing.androiddatabinding.observablefield.ClockFieldView;
 import com.jonibatista.playing.androiddatabinding.observableobject.ClockView;
 
 public class MainActivity extends Activity {
@@ -34,6 +35,9 @@ public class MainActivity extends Activity {
                     break;
                 case 1:
                     startActivity( new Intent(getApplicationContext(), ClockView.class) );
+                    break;
+                case 2:
+                    startActivity( new Intent(getApplicationContext(), ClockFieldView.class) );
                     break;
             }
         }

@@ -18,11 +18,15 @@
         </activity>
         <activity
             android:name=".databinding.StaticView"
-            android:label="@string/title_activity_static_view" >
+            android:label="@string/title_activity_staticview" >
         </activity>
         <activity
             android:name=".observableobject.ClockView"
-            android:label="@string/title_activity_clock_view" >
+            android:label="@string/title_activity_clockview" >
+        </activity>
+        <activity
+            android:name=".observablefield.ClockFieldView"
+            android:label="@string/title_activity_fieldclockview" >
         </activity>
     </application>
 
