@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jonibatista.playing.androiddatabinding" >
+    package="com.jonibatista.playing.androiddatabinding">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,16 +18,16 @@
         </activity>
         <activity
             android:name=".databinding.StaticView"
-            android:label="@string/title_activity_staticview" >
-        </activity>
+            android:label="@string/title_activity_staticview"></activity>
         <activity
             android:name=".observableobject.ClockView"
-            android:label="@string/title_activity_clockview" >
-        </activity>
+            android:label="@string/title_activity_clockview"></activity>
         <activity
             android:name=".observablefield.ClockFieldView"
-            android:label="@string/title_activity_fieldclockview" >
-        </activity>
+            android:label="@string/title_activity_fieldclockview"></activity>
+        <activity
+            android:name=".bidirectionaldatabinding.TeamView"
+            android:label="@string/title_activity_team_view"></activity>
     </application>
 
 </manifest>
