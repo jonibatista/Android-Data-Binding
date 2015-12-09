@@ -1,41 +1,28 @@
 package com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding;
 
+import android.databinding.ObservableField;
+import android.text.Editable;
+import android.text.TextWatcher;
+
+import java.util.Objects;
+
 /**
- * TODO
+ * A Team is represented by its name and it has a text field with bidirectional data binding.
+ *
+ * @see https://medium.com/@fabioCollini/android-data-binding-f9f9d3afc761#.36h3asngt
  */
 public class Team {
 
-    private String name;
+    /**
+     * An observable to notify its subscribers when the name of the team changes.
+     */
+    public final ObservableField<String> name = new ObservableField<>();
 
     /**
-     * Constructs a new team.
+     * It watches for text changes when bound and sets the new value to the team's name
+     * through its adapter.
      */
-    public Team(){}
+    public final TextWatcher watcher = new TextWatcherAdapter(name);
 
-    /**
-     * Constructs a new team.
-     *
-     * @param name the name of the team.
-     */
-    public Team(String name){
-        this.setName(name);
-    }
 
-    /**
-     * Gets the name of the team.
-     *
-     * @return the name of the team
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the name of the team.
-     *
-     * @param name the name of the team
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 }

@@ -9,7 +9,7 @@ import java.util.Calendar;
 /**
  * The observable field.
  *
- * A object that contains a time in a string format where the time can be modified.
+ * An object that contains a time in a string format where the time can be modified.
  *
  * It's the observable object sample implemented with observable field.
  * @see com.jonibatista.playing.androiddatabinding.observableobject.ClockView

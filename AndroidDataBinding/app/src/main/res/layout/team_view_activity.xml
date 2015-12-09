@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
         <variable
             name="team"
             type="com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.Team" />
@@ -47,14 +46,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Which team you rooting for?"
             android:paddingTop="20dp"
+            android:text="Which team you rooting for?"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Benfica" />
+            android:addTextChangedListener="@{team.watcher}"
+            android:inputType="textPersonName" />
+        <!-- android:text="@{team.name}"
+        You cannot bound it because you'll have a loop!
+        Each time you enter a character it'll notify its listeners (including this one),
+        thus sets the text again - old + last character - making the cursor to jum to the begin.
+
+        see the post at https://medium.com/@fabioCollini/i-had-the-same-problem-it-s-because-you-are-invoking-settext-method-even-when-the-value-is-not-aa5e7e8202e#.n1hfutplu
+        -->
 
         <TextView
             android:layout_width="fill_parent"

@@ -28,8 +28,8 @@
         <item name="clockView">Dynamic View - Bidirectional Data Binding</item>
     </array>
 
-    <string name="title_activity_team_view">Bidirectional Data Binding</string>
+    <string name="title_activity_team_view">Two-way binding in a text field</string>
     <string name="teamview_description" >
-        A basic sample of an bidirectional data biding.
+        A basic sample of a bidirectional data biding using a TextWatcher bound to a text field.
     </string>
 </resources>
