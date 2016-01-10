@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.TeamView;
+import com.jonibatista.playing.androiddatabinding.custombinding.CustomBindingActivity;
 import com.jonibatista.playing.androiddatabinding.databinding.StaticView;
 import com.jonibatista.playing.androiddatabinding.observablefield.ClockFieldView;
 import com.jonibatista.playing.androiddatabinding.observableobject.ClockView;
@@ -42,6 +43,9 @@ public class MainActivity extends Activity {
                     break;
                 case 3:
                     startActivity( new Intent(getApplicationContext(), TeamView.class) );
+                    break;
+                case 4:
+                    startActivity( new Intent(getApplicationContext(), CustomBindingActivity.class) );
                     break;
             }
         }

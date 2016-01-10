@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
-            name="team"
-            type="com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.Team" />
+            name="country"
+            type="com.jonibatista.playing.androiddatabinding.custombinding.Country" />
     </data>
 
     <LinearLayout
@@ -23,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's Go "
+                android:text="I'm "
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="30dp" />
 
@@ -31,14 +32,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:text="@{team.name}"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:text="@{country.name.get()}" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="!"
+                android:text="."
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="30dp" />
         </LinearLayout>
@@ -47,15 +48,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
-            android:text="Which team you rooting for?"
+            android:text="Which country are you from?"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
-            android:id="@+id/team"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:addTextChangedListener="@{team.watcher}"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:binding="@{country.name}" />
         <!-- android:text="@{team.name}"
         You cannot bound it because you'll have a loop!
         Each time you enter a character it'll notify its listeners (including this one),
@@ -68,7 +68,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
-            android:text="@string/teamview_description" />
+            android:text="@string/countryview_description" />
 
     </LinearLayout>
 

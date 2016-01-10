@@ -23,13 +23,19 @@
 
     <array name="menuOptions">
         <item name="staticView">Static View - Basic data binding</item>
-        <item name="clockView">Clock View with observable object</item>
-        <item name="clockView">Clock View with observable field</item>
-        <item name="clockView">Dynamic View - Bidirectional Data Binding</item>
+        <item name="clockViewObject">Clock View with observable object</item>
+        <item name="clockViewField">Clock View with observable field</item>
+        <item name="dynamicView">Dynamic View - Bidirectional Data Binding</item>
+        <item name="customView">Custom binding specification</item>
     </array>
 
     <string name="title_activity_team_view">Two-way binding in a text field</string>
-    <string name="teamview_description" >
+    <string name="teamview_description">
         A basic sample of a bidirectional data biding using a TextWatcher bound to a text field.
+    </string>
+
+    <string name="title_activity_custom_binding">Custom binding definition</string>
+    <string name="countryview_description">
+        A basic sample of a custom binding.
     </string>
 </resources>

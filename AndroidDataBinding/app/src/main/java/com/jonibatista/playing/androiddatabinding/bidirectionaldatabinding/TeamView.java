@@ -1,8 +1,8 @@
 package com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding;
 
+import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.app.Activity;
 
 import com.jonibatista.playing.androiddatabinding.R;
 import com.jonibatista.playing.androiddatabinding.databinding.TeamViewActivityBinding;

@@ -1,10 +1,7 @@
 package com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding;
 
 import android.databinding.ObservableField;
-import android.text.Editable;
 import android.text.TextWatcher;
-
-import java.util.Objects;
 
 /**
  * A Team is represented by its name and it has a text field with bidirectional data binding.
