@@ -17,20 +17,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.StaticView"
-            android:label="@string/title_activity_staticview" />
+            android:name=".bindingdata.TeamActivity"
+            android:label="@string/binding_data_title" />
         <activity
-            android:name=".observableobject.ClockView"
-            android:label="@string/title_activity_clockview" />
+            android:name=".observableobject.TeamActivity"
+            android:label="@string/observable_object_title" />
         <activity
-            android:name=".observablefield.ClockFieldView"
-            android:label="@string/title_activity_fieldclockview" />
+            android:name=".observablefield.TeamActivity"
+            android:label="@string/observable_field_title" />
         <activity
-            android:name=".bidirectionaldatabinding.TeamView"
-            android:label="@string/title_activity_team_view" />
+            android:name=".bidirectionaldatabinding.TeamActivity"
+            android:label="@string/bidirectional_databinding_title" />
         <activity
-            android:name=".custombinding.CustomBindingActivity"
-            android:label="@string/title_activity_custom_binding"></activity>
+            android:name=".custombinding.TeamActivity"
+            android:label="@string/custom_databinding_title"></activity>
     </application>
 
 </manifest>

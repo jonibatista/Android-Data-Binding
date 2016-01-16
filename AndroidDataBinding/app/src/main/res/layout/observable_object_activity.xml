@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
         <variable
             name="team"
-            type="com.jonibatista.playing.androiddatabinding.custombinding.Team" />
+            type="com.jonibatista.playing.androiddatabinding.observableobject.Team" />
     </data>
 
+
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="20dp">
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,13 +31,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:text="@{team.name.get()}"
+                android:text="@{team.name}"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="30dp" />
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,21 +43,24 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/teamNameOoEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Your team's name..."
-                android:inputType="textPersonName"
-                app:binding="@{team.name}" />
+                android:inputType="textPersonName" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickOo"
+                android:text="Ok" />
 
         </LinearLayout>
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:text="@string/custom_databinding_description" />
+            android:text="@string/observable_object_description" />
 
     </LinearLayout>
-
-
 </layout>

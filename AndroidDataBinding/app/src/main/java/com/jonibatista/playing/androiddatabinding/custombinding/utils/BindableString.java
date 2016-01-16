@@ -1,14 +1,16 @@
 package com.jonibatista.playing.androiddatabinding.custombinding.utils;
 
+import java.util.Objects;
+
 public class BindableString extends android.databinding.BaseObservable {
     String value;
 
     public String get() {
-        return value != null ? value : "";
+        return isEmpty() ? "" : value;
     }
 
     public void set(String value) {
-        if (!this.value.equals(value)) {
+        if (!Objects.equals(this.value, value)) {
             this.value = value;
             notifyChange();
         }

@@ -7,11 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.TeamView;
-import com.jonibatista.playing.androiddatabinding.custombinding.CustomBindingActivity;
-import com.jonibatista.playing.androiddatabinding.databinding.StaticView;
-import com.jonibatista.playing.androiddatabinding.observablefield.ClockFieldView;
-import com.jonibatista.playing.androiddatabinding.observableobject.ClockView;
+import com.jonibatista.playing.androiddatabinding.custombinding.TeamActivity;
 
 public class MainActivity extends Activity {
 
@@ -33,19 +29,19 @@ public class MainActivity extends Activity {
             System.out.println(position);
             switch (position){
                 case 0:
-                    startActivity( new Intent(getApplicationContext(), StaticView.class) );
+                    startActivity( new Intent(getApplicationContext(), com.jonibatista.playing.androiddatabinding.bindingdata.TeamActivity.class) );
                     break;
                 case 1:
-                    startActivity( new Intent(getApplicationContext(), ClockView.class) );
+                    startActivity( new Intent(getApplicationContext(), com.jonibatista.playing.androiddatabinding.observableobject.TeamActivity.class) );
                     break;
                 case 2:
-                    startActivity( new Intent(getApplicationContext(), ClockFieldView.class) );
+                    startActivity( new Intent(getApplicationContext(), com.jonibatista.playing.androiddatabinding.observablefield.TeamActivity.class) );
                     break;
                 case 3:
-                    startActivity( new Intent(getApplicationContext(), TeamView.class) );
+                    startActivity( new Intent(getApplicationContext(), com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.TeamActivity.class) );
                     break;
                 case 4:
-                    startActivity( new Intent(getApplicationContext(), CustomBindingActivity.class) );
+                    startActivity( new Intent(getApplicationContext(), TeamActivity.class) );
                     break;
             }
         }

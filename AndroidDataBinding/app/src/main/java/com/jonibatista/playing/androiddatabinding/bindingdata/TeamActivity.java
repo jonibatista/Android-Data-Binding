@@ -1,26 +1,26 @@
-package com.jonibatista.playing.androiddatabinding.databinding;
+package com.jonibatista.playing.androiddatabinding.bindingdata;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 
 import com.jonibatista.playing.androiddatabinding.R;
-import com.jonibatista.playing.androiddatabinding.databinding.StaticViewActivityBinding;
+import com.jonibatista.playing.androiddatabinding.databinding.BindingDataActivityBinding;
 
 /**
  * A basic example that uses Android Data Binding library to display a POJO.
  *
  * For more information see the official documentation at http://developer.android.com/tools/data-binding/guide.html#data_object.
  */
-public class StaticView extends Activity {
+public class TeamActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // binding a user to the UI
-        StaticViewActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.static_view_activity);
-        User user = new User("Foo", "Bar"); // Creating a new user to bound
-        binding.setUser(user);
+        BindingDataActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.binding_data_activity);
+        Team team = new Team("S. L. Benfica"); // Creating a new Team to bound
+        binding.setTeam(team);
     }
 }

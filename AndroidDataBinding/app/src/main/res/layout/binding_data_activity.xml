@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="user"
-            type="com.jonibatista.playing.androiddatabinding.databinding.User" />
+            name="team"
+            type="com.jonibatista.playing.androiddatabinding.bindingdata.Team" />
     </data>
 
     <LinearLayout
@@ -24,29 +24,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text="Gooo "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:text="@{user.firstName}"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:text="@{user.lastName}"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text="@{team.name}"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="30dp" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/staticview_description" />
-
+            android:text="@string/binding_data_description" />
 
     </LinearLayout>
 

@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="team"
             type="com.jonibatista.playing.androiddatabinding.bidirectionaldatabinding.Team" />
@@ -23,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's Go "
+                android:text="Gooo "
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="30dp" />
 
@@ -33,29 +34,16 @@
                 android:paddingLeft="5dp"
                 android:text="@{team.name}"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="30dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="!"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="30dp" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:text="Which team you rooting for?"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <EditText
-            android:id="@+id/team"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:addTextChangedListener="@{team.watcher}"
-            android:inputType="textPersonName" />
+            android:hint="Your team's name..."
+            android:inputType="textPersonName"/>
         <!-- android:text="@{team.name}"
         You cannot bound it because you'll have a loop!
         Each time you enter a character it'll notify its listeners (including this one),
@@ -68,7 +56,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
-            android:text="@string/teamview_description" />
+            android:text="@string/bidirectional_databinding_description" />
 
     </LinearLayout>
 

@@ -1,41 +1,40 @@
 <resources>
     <string name="app_name">Playing with Data Binding</string>
 
-    <string name="title_activity_staticview">Basic data binding</string>
-    <string name="staticview_description">
+    <string name="binding_data_title">Binding Data</string>
+    <string name="binding_data_description">
         A basic sample that uses Android Data Binding library to display a POJO.
     </string>
 
-    <string name="clock_label">Time</string>
-    <string name="updateClockBtn">Update Time</string>
-
-    <string name="title_activity_clockview">Observable object sample</string>
-    <string name="clockview_description">
-        A basic sample of an observable object that updates the time when you hit the update button.
-        The button has a click event bound to it that modifies the observable which triggers the UI update.
+    <string name="observable_object_title">Observable object</string>
+    <string name="observable_object_description">
+        A basic sample of an observable object that updates the UI when you hit the okay button.
+        The onClick method will set the team\'s name that will fires the notifyPropertyChanged.
     </string>
 
-    <string name="title_activity_fieldclockview">Observable field sample</string>
-    <string name="clockfieldview_description">
-        A basic sample of an observable field that updates the time when you hit the update button.
-        The button has a click event bound to it that modifies the observable which triggers the UI update.
+    <string name="observable_field_title">Observable field</string>
+    <string name="observable_field_description">
+        A basic sample of an observable field that updates the UI when you hit the okay button.
+        The onClick method will set the team\'s ObservableField value that will update the UI automatically.
+    </string>
+
+    <string name="bidirectional_databinding_title">Two-way binding in a text field</string>
+    <string name="bidirectional_databinding_description">
+        A basic sample of a bidirectional data biding using a TextWatcher bound to a text field.
+        The TextWatcher is watching for text changes in order to set the observable field on afterTextChanged(...).
+    </string>
+
+    <string name="custom_databinding_title">Custom data binding</string>
+    <string name="custom_databinding_description">
+        A basic sample of data binding using custom binding tags.
     </string>
 
     <array name="menuOptions">
-        <item name="staticView">Static View - Basic data binding</item>
-        <item name="clockViewObject">Clock View with observable object</item>
-        <item name="clockViewField">Clock View with observable field</item>
-        <item name="dynamicView">Dynamic View - Bidirectional Data Binding</item>
-        <item name="customView">Custom binding specification</item>
+        <item name="data_binding">Display data with Data Object</item>
+        <item name="observable_object">Display data with ObservableObject</item>
+        <item name="observable_field">Display data with ObservableField</item>
+        <item name="dynamicView">Bidirectional Data Binding</item>
+        <item name="customView">Custom Binding</item>
     </array>
 
-    <string name="title_activity_team_view">Two-way binding in a text field</string>
-    <string name="teamview_description">
-        A basic sample of a bidirectional data biding using a TextWatcher bound to a text field.
-    </string>
-
-    <string name="title_activity_custom_binding">Custom binding definition</string>
-    <string name="countryview_description">
-        A basic sample of a custom binding.
-    </string>
 </resources>
