@@ -4,7 +4,6 @@ import android.databinding.Observable;
 import android.databinding.PropertyChangeRegistry;
 
 public class BaseObservable implements Observable {
-
     private PropertyChangeRegistry mCallbacks;
 
     public synchronized void addOnPropertyChangedCallback(OnPropertyChangedCallback listener) {
