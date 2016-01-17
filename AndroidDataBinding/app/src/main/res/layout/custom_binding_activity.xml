@@ -52,6 +52,19 @@
                 android:hint="Your team's name..."
                 android:inputType="textPersonName"
                 app:binding="@{team.name}" />
+            <!-- android:text="@{team.name}"
+            The problem is that you are using two bindings that cannot be used together.
+            Keep in mind that android:text updates the edit text value when calling the notify
+            and android:addTextChangedListener calls the notify every time you enter or remove a
+            character from the EditText — due to the TextWatcherAdapter — thus by default android
+            EditText sets the cursor to the begin each time a new value is set.
+
+            In other words, each time you change the EditText value you’ll call the notify — through
+            android:addTextChangedListener — that will update the android:text — thus setting the
+            cursor to the beginning.
+
+            see the post at https://medium.com/@lehel.gyorfi/great-tutorial-thank-you-7e0b5c36fda#.ffi7vm9dd
+            -->
 
         </LinearLayout>
 

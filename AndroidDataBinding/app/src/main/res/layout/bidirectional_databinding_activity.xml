@@ -45,11 +45,17 @@
             android:hint="Your team's name..."
             android:inputType="textPersonName"/>
         <!-- android:text="@{team.name}"
-        You cannot bound it because you'll have a loop!
-        Each time you enter a character it'll notify its listeners (including this one),
-        thus sets the text again - old + last character - making the cursor to jum to the begin.
+        The problem is that you are using two bindings that cannot be used together.
+        Keep in mind that android:text updates the edit text value when calling the notify
+        and android:addTextChangedListener calls the notify every time you enter or remove a
+        character from the EditText — due to the TextWatcherAdapter — thus by default android
+        EditText sets the cursor to the begin each time a new value is set.
 
-        see the post at https://medium.com/@fabioCollini/i-had-the-same-problem-it-s-because-you-are-invoking-settext-method-even-when-the-value-is-not-aa5e7e8202e#.n1hfutplu
+        In other words, each time you change the EditText value you’ll call the notify — through
+        android:addTextChangedListener — that will update the android:text — thus setting the
+        cursor to the beginning.
+
+        see the post at https://medium.com/@lehel.gyorfi/great-tutorial-thank-you-7e0b5c36fda#.ffi7vm9dd
         -->
 
         <TextView
